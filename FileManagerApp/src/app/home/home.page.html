@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-title>
+    File Manager
+  </ion-title>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label position="floating">
+      File Name
+    </ion-label>
+    <ion-input [(ngModel)]="fileName"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">
+      File Content
+    </ion-label>
+    <ion-textarea [(ngModel)]="fileContent"></ion-textarea>
+  </ion-item>
+
+  <ion-button expand="full" (click)="createFile()">
+    Create File
+  </ion-button>
+  <ion-button expand="full" (click)="deleteFile()">
+    Delete File
+  </ion-button>
+  <ion-button expand="full" (click)="readFile()">
+    Read File
+  </ion-button>
+  <ion-button expand="full" [routerLink]="['/files']">
+    Open File Lists
+  </ion-button>
+
+  <ion-list>
+    <ion-item *ngFor="let file of fileList">
+      {{ file }}
+    </ion-item>
+  </ion-list>
+
+</ion-content>
