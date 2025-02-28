@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Camera Application
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button expand="block" (click)="takePicture()">Take a Pic!</ion-button>
+  <ion-button expand="block" (click)="pickFromGallery()">Choose from Gallery</ion-button>
+  
+  <div *ngIf="image">
+    <img [src]="image" alt="Picture" />
+  </div>
+</ion-content>
