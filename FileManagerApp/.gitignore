@@ -72,15 +72,3 @@ Thumbs.db
 /.vscode
 /android
 /node_modules
-/.browserslistrc
-/.editorconfig
-/.eslintrc.json
-/angular.json
-/capacitor.config.ts
-/ionic.config.json
-/karma.conf.js
-/package-lock.json
-/package.json
-/tsconfig.app.json
-/tsconfig.json
-/tsconfig.spec.json
