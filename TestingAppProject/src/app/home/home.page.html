@@ -9,8 +9,15 @@
 <ion-content [fullscreen]="true">
   <ion-button expand="block" (click)="takePicture()">Take a Pic!</ion-button>
   <ion-button expand="block" (click)="pickFromGallery()">Choose from Gallery</ion-button>
-  
+  <ion-button expand="block" (click)="getCurrentLocation()">Get Current Location</ion-button>
+  <ion-button expand="block" (click)="watchLocation()">Watch Location</ion-button>
+
   <div *ngIf="image">
     <img [src]="image" alt="Picture" />
+  </div>
+
+  <div *ngIf="location">
+    <p><strong>Latitude:</strong> {{ location.latitude }}</p>
+    <p><strong>Longitude:</strong> {{ location.longitude }}</p>
   </div>
 </ion-content>
